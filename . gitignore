@@ -1,0 +1,21 @@
+# Exclude Mac system files
+.DS_Store
+
+# Exclude hidden files and directories
+.*
+!.gitignore
+
+# Exclude node_modules directory
+node_modules/
+
+# Exclude log files
+*.log
+
+# Exclude temporary files
+*.tmp
+*.swp
+
+# Exclude build directories
+build/
+dist/
+workbook/

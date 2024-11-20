@@ -1,6 +1,3 @@
-# estimate-design-studio
-A WordPress plugin to manage your estimates in a Design Studio, in a fluid, logical and efficient workflow.
-
 === Estimate Design Studio ===
 Contributors: Gadlab, PierreYvesGadina
 Donate link: https://gadlab.net/donate
@@ -8,8 +5,10 @@ Tags: design, estimate, studio
 Requires at least: 5.0
 Tested up to: 6.7
 Stable tag: 1.0.0
-License: GPLv3
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+A plugin to manage your estimates with a design studio.
 
 == Description ==
 
