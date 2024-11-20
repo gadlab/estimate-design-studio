@@ -1,3 +1,25 @@
+# Exclude IDE and Mac system files 
+.DS_Store
+
+# Exclude hidden files and directories
+.*
+!.gitignore
+
+# Exclude node_modules directory
+node_modules/
+
+# Exclude log files
+*.log
+
+# Exclude temporary files
+*.tmp
+*.swp
+
+# Exclude build directories
+build/
+dist/
+workbook/
+
 # Wordpress - ignore core, configuration, examples, uploads and logs.
 # https://github.com/github/gitignore/blob/main/WordPress.gitignore
 
