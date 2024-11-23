@@ -3,7 +3,7 @@
  * Plugin Name: Estimate Design Studio
  * Plugin URI: https://gadlab.net.com/plugins/esd
  * Description: A plugin to manage your estimates in a Design Studio.
- * Version: 1.0.0
+ * Version: 1.0.3
  * Author: Gad Lab / Pierre-Yves Gadina
  * Author URI: https://gadlab.net/
  * Text Domain: estimate-design-studio
@@ -29,3 +29,30 @@ function eds_load_textdomain() {
 }
 add_action( 'plugins_loaded', 'eds_load_textdomain' );
 
+// Enqueue admin styles and scripts
+function eds_enqueue_admin_assets($hook) {
+    // Load styles only on the plugin's admin page
+    if ($hook !== 'toplevel_page_estimate-design-studio') {
+        return;
+    }
+
+    // Enqueue the admin CSS file
+    wp_enqueue_style(
+        'eds-admin-style',
+        EDS_PLUGIN_URL . 'admin/css/eds-admin-style.css',
+        [],
+        '1.0.3'
+    );
+
+    // Enqueue the admin JS file
+    wp_enqueue_script(
+        'eds-admin-script',
+        EDS_PLUGIN_URL . 'admin/js/eds-admin-script.js',
+        ['jquery'],
+        '1.0.3',
+        true
+    );
+}
+add_action('admin_enqueue_scripts', 'eds_enqueue_admin_assets');
+
+// Example of additional functionality (if needed, you can extend here)
